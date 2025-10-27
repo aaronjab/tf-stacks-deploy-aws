@@ -25,3 +25,8 @@ variable "default_tags" {
     Environment = "dev"
   }
 }
+variable "instance_type" {
+  description = "EC2 instance type for private instances"
+  type        = string
+  default     = "t3.micro"
+}
