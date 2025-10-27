@@ -11,20 +11,20 @@ deployment "development" {
     role_arn       = "arn:aws:iam::493290348520:role/stacks-Jab-Stacks"
     identity_token = identity_token.aws.jwt
     default_tags = {
-      Stack       = "learn-stacks-deploy-aws",
+      Stack       = "demo-stacks-deploy-aws",
       Environment = "dev"
     }
   }
 }
 
-deployment "production" {
-  inputs = {
-    regions        = ["us-east-1", "us-west-1"]
-    role_arn       = "arn:aws:iam::493290348520:role/stacks-Jab-Stacks"
-    identity_token = identity_token.aws.jwt
-    default_tags = {
-      Stack       = "learn-stacks-deploy-aws",
-      Environment = "prod"
-    }
-  }
-}
+# deployment "production" {
+#   inputs = {
+#     regions        = ["us-east-1", "us-west-1"]
+#     role_arn       = "arn:aws:iam::493290348520:role/stacks-Jab-Stacks"
+#     identity_token = identity_token.aws.jwt
+#     default_tags = {
+#       Stack       = "demo-stacks-deploy-aws",
+#       Environment = "prod"
+#     }
+#   }
+# }
